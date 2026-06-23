@@ -21,7 +21,7 @@ def load_model():
         with open('threshold.pkl', 'rb') as f:
             threshold = pickle.load(f)
     except FileNotFoundError:
-        threshold = 0.40   # fallback jika file lama tidak ada threshold.pkl
+        threshold = 0.50   # fallback jika file lama tidak ada threshold.pkl
     return model, scaler, threshold
 
 model, scaler, THRESHOLD = load_model()
